@@ -7,9 +7,9 @@ public class Worker {
         this.errorCallback = errorCallback;
     }
 
-    public void start(int a) {
+    public void start(int taskErrorNumber) {
         for (int i = 0; i < 100; i++) {
-            if (i == a) {
+            if (i == taskErrorNumber) {
                 errorCallback.onError("Task " + i + " is ERROR");
             }
             callback.onDone("Task " + i + " is done");
